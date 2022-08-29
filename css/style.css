@@ -1,0 +1,550 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./images/topography.svg),
+    linear-gradient(110deg, #f93d66, #6d47d9);
+  background-attachment: fixed;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+[class^="box-"] {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+}
+
+.master {
+  height: 90vh;
+  width: 90%;
+  margin: 20px auto;
+
+  display: grid;
+  gap: 20px;
+}
+
+.master-image img {
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+[class^="list-"] {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  background: yellow;
+}
+
+.beginner {
+  width: 90%;
+  margin: 20px auto;
+  gap: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+    "t t t t  b b b b  b w w w  "
+    "d d d d  d r r r  r r r r";
+}
+
+.beginner .list-1 {
+  grid-area: t;
+}
+.beginner .list-2 {
+  grid-area: b;
+}
+
+.beginner .list-3 {
+  grid-area: w;
+}
+
+.beginner .list-4 {
+  grid-area: d;
+}
+
+.beginner .list-5 {
+  grid-area: r;
+}
+
+.beginner a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.box-3 {
+  background: white url(images/taco.jpg);
+  background-image: url(/images/taco-155812_1280.png);
+  min-height: 400px;
+}
+
+.joint {
+  background-color: yellow;
+  padding: 4px;
+}
+
+.good {
+  background-color: yellow;
+  width: 60%;
+  padding: 5px;
+}
+
+.box-4 {
+  background-color: yellow;
+}
+
+.am {
+  font-size: 60px;
+  font-weight: lighter;
+}
+
+.box-5 {
+  background-color: yellow;
+}
+
+.nt {
+  font-size: 60px;
+  font-weight: lighter;
+}
+
+.box-6 {
+  background: white;
+  min-height: 150px;
+  text-align: center;
+}
+
+.i {
+  font-size: 50px;
+}
+
+.t {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.word {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.box-7 {
+  background: white;
+  min-height: 150px;
+  text-align: center;
+}
+
+.box-8 {
+  background: white;
+  min-height: 150px;
+  text-align: center;
+}
+
+.box-9 {
+  background: white;
+  min-height: 150px;
+  text-align: center;
+}
+
+.box-10 {
+  padding-bottom: 10%;
+  background: white;
+  text-align: left;
+}
+
+.box-10 h2 {
+  font-weight: bolder;
+}
+
+.box-10 h4 {
+  width: 90%;
+}
+
+.box-10 h5 {
+  font-weight: bolder;
+}
+
+.box-10 a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  background-color: yellow;
+}
+
+.center {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+  position: relative;
+}
+
+.center:before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 10px;
+  background: url(./images/topography.svg),
+    linear-gradient(110deg, #f93d66, yellow);
+  position: absolute;
+  left: 0;
+  top: 40%;
+  z-index: -2;
+}
+
+.center:after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 10px;
+  background: url(./images/topography.svg),
+    linear-gradient(110deg, yellow, #6d47d9);
+  position: absolute;
+  right: 0;
+  top: 40%;
+  z-index: -2;
+}
+
+span {
+  background: #fff;
+}
+
+@media (min-width: 768px) {
+  .beginner {
+    width: 100%;
+    margin: 20px auto;
+    gap: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "t t t b  b b w w w d d d d r r";
+  }
+
+  .beginner .list-1 {
+    grid-area: t;
+  }
+  .beginner .list-2 {
+    grid-area: b;
+  }
+
+  .beginner .list-3 {
+    grid-area: w;
+  }
+
+  .beginner .list-4 {
+    grid-area: d;
+  }
+
+  .beginner .list-5 {
+    grid-area: r;
+  }
+
+  .box-3 {
+    justify-content: left;
+    padding-left: 50px;
+  }
+
+  .two {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "z z z z   z z y y y y y y";
+  }
+
+  .two .box-4 {
+    grid-area: z;
+  }
+
+  .two .box-5 {
+    grid-area: y;
+  }
+
+  .split {
+    display: grid;
+    width: 100%;
+    gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "e e e e  e e q q  q q q q"
+      "r r r r  r r l l  l l l l";
+  }
+
+  .split .box-6 {
+    grid-area: e;
+  }
+
+  .split .box-7 {
+    grid-area: q;
+  }
+
+  .split .box-8 {
+    grid-area: r;
+  }
+
+  .split .box-9 {
+    grid-area: l;
+  }
+
+  .center {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+  }
+
+  .center:before {
+    content: "";
+    display: block;
+    width: 250px;
+    height: 10px;
+    background: url(./images/topography.svg),
+      linear-gradient(110deg, #f93d66, yellow);
+    position: absolute;
+    left: 0;
+    top: 40%;
+    z-index: -2;
+  }
+
+  .center:after {
+    content: "";
+    display: block;
+    width: 250px;
+    height: 10px;
+    background: url(./images/topography.svg),
+      linear-gradient(110deg, yellow, #6d47d9);
+    position: absolute;
+    right: 0;
+    top: 40%;
+    z-index: -2;
+  }
+
+  span {
+    background: #fff;
+  }
+
+  .master-image img {
+    width: 340px;
+    height: 400px;
+    border-radius: 10px;
+    margin: 20px auto;
+  }
+
+  .card {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "a a a a  a a s s  s s s s"
+      "d d d d  d d f f  f f f f"
+      "g g g g  g g h h  h h h h"
+      "j j j j  j j k k  k k k k"
+      "n n n n  n n c c  c c c c";
+  }
+
+  .card .box-12 {
+    grid-area: a;
+  }
+
+  .card .box-13 {
+    grid-area: s;
+  }
+
+  .card .box-14 {
+    grid-area: d;
+  }
+
+  .card .box-15 {
+    grid-area: f;
+  }
+
+  .card .box-16 {
+    grid-area: g;
+  }
+
+  .card .box-17 {
+    grid-area: h;
+  }
+
+  .card .box-18 {
+    grid-area: j;
+  }
+
+  .card .box-19 {
+    grid-area: k;
+  }
+
+  .card .box-20 {
+    grid-area: n;
+  }
+
+  .card .box-21 {
+    grid-area: c;
+  }
+}
+
+@media (min-width: 1080px) {
+  .cover {
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "j j j j  j j j j  g g g g "
+      "j j j j  j j j j  g g g g "
+      "j j j j  j j j j  f f f f "
+      "j j j j  j j j j  f f f f ";
+  }
+
+  .cover .box-3 {
+    grid-area: j;
+  }
+
+  .cover .box-4 {
+    grid-area: g;
+  }
+
+  .cover .box-5 {
+    grid-area: f;
+  }
+
+  .split {
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "z z z u  u u v v  v w w w";
+  }
+
+  .split .box-6 {
+    grid-area: z;
+  }
+
+  .split .box-7 {
+    grid-area: u;
+  }
+
+  .split .box-8 {
+    grid-area: v;
+  }
+
+  .split .box-9 {
+    grid-area: w;
+  }
+
+  .box-10 {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 400px 300px;
+  }
+
+  .box-10 h4 {
+    width: 150%;
+  }
+
+  .box-10 a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px;
+    background-color: yellow;
+  }
+
+  .center {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+  }
+
+  .center:before {
+    content: "";
+    display: block;
+    width: 500px;
+    height: 10px;
+    background: url(./images/topography.svg),
+      linear-gradient(110deg, #f93d66, yellow);
+    position: absolute;
+    left: 0;
+    top: 40%;
+    z-index: -2;
+  }
+
+  .center:after {
+    content: "";
+    display: block;
+    width: 500px;
+    height: 10px;
+    background: url(./images/topography.svg),
+      linear-gradient(110deg, yellow, #6d47d9);
+    position: absolute;
+    right: 0;
+    top: 40%;
+    z-index: -2;
+  }
+
+  span {
+    background: #fff;
+  }
+  .master-image img {
+    width: 200px;
+    height: 300px;
+  }
+
+  .card {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "a a a s  s s d d  d f f g"
+      "h h h j  j j k k  k n n c";
+  }
+
+  .card .box-12 {
+    grid-area: a;
+  }
+
+  .card .box-13 {
+    grid-area: s;
+  }
+
+  .card .box-14 {
+    grid-area: d;
+  }
+
+  .card .box-15 {
+    grid-area: f;
+  }
+
+  .card .box-16 {
+    grid-area: g;
+  }
+
+  .card .box-17 {
+    grid-area: h;
+  }
+
+  .card .box-18 {
+    grid-area: j;
+  }
+
+  .card .box-19 {
+    grid-area: k;
+  }
+
+  .card .box-20 {
+    grid-area: n;
+  }
+
+  .card .box-21 {
+    grid-area: c;
+  }
+}
